@@ -3,6 +3,13 @@
     padding: 0;
     box-sizing: border-box;
 }
-body {
-    background-color: grey;
+main {
+    display: flex;
+    justify-content: center;
+}
+.Inscription {
+    border: 1px solid black;
+}
+.Connexion {
+    border: 1px solid red;
 }

@@ -24,48 +24,25 @@
     width: 5%;
     gap: 10px;
 }
-.Profils,
-.LogOut {
-    cursor: pointer;
-
-}
-main {
-    margin: 30px;
+/* Main */
+.main {
     display: flex;
     justify-content: center;
-}
-.container-post {
-    border: 1px solid red;
-    margin: 40px 10px;
-    padding: 5%;
-    width: 40%;
-    position: relative;
-    gap: 20px;
-    border-radius: 20px;
-}
-.poste {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    gap: 30px;
-    border: 1px solid purple;
-}
-.Create {
-    position: absolute;
-    border: 1px solid red;
-    border-radius: 10px;
-    box-shadow: 0 2px 10px rgba(128, 128, 128, 0.824);
-    bottom: 10px;
-    right: 30px;
-    padding: 2%;
-    cursor: pointer;
-}
-.Screen {
+    margin:40px 20px;
+    flex-wrap: wrap;
     border: 1px solid black;
-    border-radius: 10px;
-    padding: 10%;
+}
+.poste1,
+.poste2,
+.poste3,
+.poste4,
+.poste5,
+.poste6,
+.poste7,
+.poste8 {
+    width: 10%;
+    border: 1px solid red;
+    margin: 40px;
 }
 footer {
     box-shadow:0 0 40px rgba(255, 0, 0, 0.559);

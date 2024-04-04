@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CreatePoste</title>
+    <link rel="stylesheet" href="Create.css">
+</head>
+<body>
+    <header class="header">
+        <img src="../media/Pouleto.png" alt="" class="logo">
+        <div class="button">
+        <button class="Profils">Profil</button>
+        <button class="LogOut">LogOut</button>
+    </div>
+    </header>
+    <main>
+        <div class="container-post">
+        <form action="/ma-page-de-traitement" method="post">
+            <ul class="poste">
+              <li>
+                <label for="image">Image:</label>
+                <input type="file"/>
+              </li>
+              <li>
+                <label for="text">Titre:</label>
+                <input type="email" id="mail" name="user_mail" />
+              </li>
+              <li>
+                <label for="msg">Message:</label>
+                <textarea id="msg" name="user_message"></textarea>
+              </li>
+            </ul>
+          </form>
+        </div>
+    </main>
+    <footer>
+        <ul>
+            <li>Lorem ipsum dolor sit.</li>
+            <li>Lorem ipsum dolor sit.</li>
+            <li>Lorem ipsum dolor sit.</li>
+        </ul>
+    </footer>
+</body>
+<script src="Create.js"></script>
+</html>

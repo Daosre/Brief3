@@ -1,11 +1,28 @@
-let modif = document.querySelector('.modifcation')
-let Valid = document.querySelector('.valider')
+async function addArtciles() {
+    let title = document.querySelector('.title')
+    let image = document.querySelector('.ImageUrl')
+    let description = document.querySelector('.text-description')
+    let location = document.querySelector('.location')
+    let price = document.querySelector('.price')
 
+    let newArticles = {
+        title: title,
+        image : image,
+        description: description,
+        location: location,
+        price: price
+    }
 
-modif.addEventListener('click', () => {
-    window.location.href = "../CreatePoste/Create.html"
-})
+    let request = {
+        method: 'POST',
+        headers: {
+            'Content-type': 'application/json; charset=utf-8',
+        },
+        body: JSON.stringify(newArticles)
+    }
 
-Valid.addEventListener('click', () => {
-    window.location.href = "../Scroll-Page/Scroll.html"
-})
+    let apiRequest = await fetch('http://127.0.0.1:4529/register', request)
+    let reponse = await apiRequest
+    console.log(reponse)
+
+    }

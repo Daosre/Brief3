@@ -1,9 +1,52 @@
-let button = document.querySelector('.SignIn');
-let button1 = document.querySelector('.LogIn');
+async function handleregister() {
+    let firstName = document.querySelector('.Name').value
+    let lastName = document.querySelector('.LastName').value
+    let email = document.querySelector('.Mail').value
+    let password = document.querySelector('.Password').value
 
-button.addEventListener('click', () => {
-    window.location.href = "../Scroll-Page/Scroll.html"
-})
-button1.addEventListener('click', () => {
-    window.location.href = "../Scroll-Page/Scroll.html"
-})
+    let newUser = {
+        firstName: firstName,
+        lastName : lastName,
+        email: email,
+        password: password
+    }
+
+    let request = {
+        method: 'POST',
+        headers: {
+            'Content-type': 'application/json; charset=utf-8',
+        },
+        body: JSON.stringify(newUser)
+    }
+
+    let apiRequest = await fetch('http://127.0.0.1:4529/register', request)
+    let reponse = await apiRequest
+    console.log(reponse)
+         setTimeout(() => {
+             window.location.href="../Scroll-Page/Scroll.html"
+         }, 3000)
+    }
+
+    async function handleLogin() {
+        let email = document.querySelector('.Maiil').value
+        let password = document.querySelector('.Passsword').value
+
+        let LogUser = {
+            email: email,
+            password: password
+        }
+
+        let request = {
+            method: 'POST',
+            headers: {
+                'Content-type': 'application/json; charset=utf-8',
+            },
+            body: JSON.stringify(LogUser)
+        }
+        let apiRequest = await fetch('http://127.0.0.1:4529/login', request)
+        let reponse = await apiRequest
+        console.log(reponse)
+         setTimeout(() => {
+             window.location.href="../Scroll-Page/Scroll.html"
+         }, 3000)
+    }

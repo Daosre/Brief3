@@ -35,10 +35,12 @@ async function CreatePost() {
     } 
     if(price === '') {
         error.innerHTML = 'Missing Field'
-    } else {
-        error.style.display = 'none'
-        let apiRequest = await fetch('http://127.0.0.1:4529/addArticles', request)
-        let reponse = await apiRequest
-        console.log(reponse)
-    }         
+    }
+    let apiRequest = await fetch('http://127.0.0.1:4529/addArticles', request)
+            let reponse = await apiRequest
+            if(reponse.status === 200) {
+                window.location.href = '../Scroll-Page/Scroll.html'
+            } else {
+                error.innerHTML = "Demerde toi c'est pas bon"
+            }         
     }

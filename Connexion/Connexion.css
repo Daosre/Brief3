@@ -68,6 +68,9 @@ h1,h2 {
     opacity: 70%;
     cursor: pointer;
 }
+.error {
+    color:  red;
+}
 footer {
     position: absolute;
     bottom: 0;

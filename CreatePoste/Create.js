@@ -36,9 +36,9 @@ async function CreatePost() {
     if(price === '') {
         error.innerHTML = 'Missing Field'
     } else {
+        error.style.display = 'none'
         let apiRequest = await fetch('http://127.0.0.1:4529/addArticles', request)
         let reponse = await apiRequest
         console.log(reponse)
-        window.location.href = "../AfterCreate/AfterCreate.html"
-    }
+    }         
     }

@@ -19,22 +19,25 @@
         <form action="/ma-page-de-traitement" method="post">
             <ul class="poste">
               <li>
-                <input type="text" class="title">Title:
+                <label for="title">Title</label>
+                <input type="text" class="title">
                 <label for="image">Image:</label>
-                <input type="url" placeholder="Url Only"/>
+                <input type="url" placeholder="Url Only" class="Img"/>
               </li>
               <li>
-                <input type="text" class="location">Location:</inout>
-                <input type="text" class="price">Price:</input>
-                <input type="email" id="mail" name="user_mail" />
+                <label for="Location" >Location</label>
+                <input type="text" class="location"></inout>
+                <label for="Price">Price</label>
+                <inputz type="text" class="price"></input>
               </li>
               <li>
                 <label for="msg">Message:</label>
-                <textarea id="msg" name="user_message"></textarea>
+                <textarea class="message" name="user_message"></textarea>
               </li>
             </ul>
+            <p class="error"></p>
           </form>
-          <button class="Create">Create</button>
+          <button class="Create" onclick="CreatePost()">Create</button>
         </div>
     </main>
     <footer>

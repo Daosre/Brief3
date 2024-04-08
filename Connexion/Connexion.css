@@ -37,6 +37,9 @@ header img {
     padding: 1%;
     background-color: rgba(255, 255, 255, 0.667);
 }
+.error1 {
+    color: red;
+}
 input {
     width: 50%;
     text-align: center;

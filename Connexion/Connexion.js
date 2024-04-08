@@ -3,6 +3,8 @@ async function handleregister() {
     let lastName = document.querySelector('.LastName').value
     let email = document.querySelector('.Mail').value
     let password = document.querySelector('.Password').value
+    let error = document.querySelector('.error1')
+
 
     let newUser = {
         firstName: firstName,
@@ -20,11 +22,12 @@ async function handleregister() {
     }
 
     let apiRequest = await fetch('http://127.0.0.1:4529/register', request)
-    let reponse = await apiRequest
-    console.log(reponse)
-         setTimeout(() => {
-             window.location.href="../Scroll-Page/Scroll.html"
-         }, 3000)
+            let reponse = await apiRequest
+            if(reponse.status === 200) {
+                window.location.href = '../Scroll-Page/Scroll.html'
+            } else {
+                error.innerHTML = "Demerde toi c'est pas bon"
+            }
     }
 
     async function handleLogin() {

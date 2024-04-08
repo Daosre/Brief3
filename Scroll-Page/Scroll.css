@@ -32,14 +32,10 @@
     flex-wrap: wrap;
     border: 1px solid black;
 }
-.poste1,
-.poste2,
-.poste3,
-.poste4,
-.poste5,
-.poste6,
-.poste7,
-.poste8 {
+.error1 {
+    color: red;
+}
+.poste1 {
     width: 10%;
     border: 1px solid red;
     margin: 40px;
@@ -58,4 +54,7 @@ ul {
     display: flex;
     justify-content: space-around;
     width: 100%;
+}
+img {
+    width: 10%;
 }

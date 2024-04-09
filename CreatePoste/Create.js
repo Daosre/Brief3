@@ -11,7 +11,9 @@ async function CreatePost() {
         image : image,
         description : description,
         location : location,
-        price : price
+        price : price,
+        localStorage: localStorage.getItem('session')
+
     } 
     let request = {
         method: 'POST',

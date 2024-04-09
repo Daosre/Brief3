@@ -5,7 +5,7 @@
     box-sizing: border-box;
 }
 body {
-    background-color: #d8cbc794;
+    background-color: #cddddd8d;
 }
 header {
     display: flex;
@@ -20,11 +20,11 @@ main {
     margin: 20px;
 }
 header img {
-    filter: drop-shadow(0 0 6px black);
+    filter: drop-shadow(0 1px 10px black);
 }
 .Inscription,
 .Connexion {
-    box-shadow: 0 2px 30px white;
+    box-shadow: 0 2px 30px rgba(255, 166, 0, 0.561);
     border-radius: 10px;
     display: flex;
     flex-direction: column;
@@ -82,7 +82,11 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: black;
+    background-image: url(../media/giphy.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+    box-shadow: 0 1px 30px black;
 }
 ul {
     display: flex;

@@ -45,5 +45,3 @@ async function CreatePost() {
                 error.innerHTML = "Demerde toi c'est pas bon"
             }         
     }
-let suppr = document.querySelector('.Suppr')
-suppr.location.href = '../Scroll-Page/Scroll.html'

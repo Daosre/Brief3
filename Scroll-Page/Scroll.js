@@ -30,13 +30,11 @@ async function gethis() {
 
         if(Articles.userid === localUser) {
             ok.innerHTML += `<button class="Suppr" onclick="Supprimer('${Articles._id}')">Suppr</button>
-            <button class="edit" onclick="editer('${Articles._id}')">Edit</button>
-            `
-        }        
+            <a href="../CreatePoste/Edit.html" class="edit" onclick="editer('${Articles._id}')">Edit</a>`
+        }
         articlesmachin.appendChild(ok)
     };
 }
-
 async function Supprimer(oki) {
     let request = {
         method: 'DELETE',
@@ -50,14 +48,10 @@ async function Supprimer(oki) {
 
 
 async function editer(oki) {
-    let request = {
-        method: 'PATCH',
-        headers: {
-            'Content-type': 'application/json; charset=utf-8',
-        },
-    }
-    let response = await fetch(`http://127.0.0.1:4529/editArticle/${oki}`, request)
-    window.location.href = `../CreatePoste/Edit.html`
+    localStorage.setItem('Article', oki)
 }
+
+
 gethis()
+
 

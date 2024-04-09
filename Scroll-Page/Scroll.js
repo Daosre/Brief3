@@ -10,11 +10,13 @@ LogOut.addEventListener('click', () => {
     window.location.href = '../Accueil/Accueil.html'
 })
 
+
 async function gethis() {
     let response = await fetch('http://127.0.0.1:4529/getAllArticles')
     let main = await response.json()
     let articlesmachin = document.querySelector('.main')
     let localUser = localStorage.getItem('session')
+
 
     for(const Articles of main ) {
         let ok = document.createElement('div')
@@ -25,18 +27,37 @@ async function gethis() {
         <p class="descript">${Articles.description}</p>
         <p class="location">${Articles.location}</p>
         <p class="price">${Articles.price}</p>`
+
         if(Articles.userid === localUser) {
-            ok.innerHTML += `<button class="Suppr" onclick="Supprimer">Suppr</a>`
-        } else {
-            console.log('ok')
-        }
+            ok.innerHTML += `<button class="Suppr" onclick="Supprimer('${Articles._id}')">Suppr</button>
+            <button class="edit" onclick="editer('${Articles._id}')">Edit</button>
+            `
+        }        
         articlesmachin.appendChild(ok)
     };
 }
 
-let Supprimer = document.querySelector('.Suppr')
-Supprimer.addEventListener('click', () => {
-    window.location.href = '../Scroll-Page/Scroll.html'
-})
+async function Supprimer(oki) {
+    let request = {
+        method: 'DELETE',
+        headers: {
+            'Content-type': 'application/json; charset=utf-8',
+        },
+    }
+    let response = await fetch(`http://127.0.0.1:4529/deleteArticles/${oki}`, request)
+    window.location.href = `../Scroll-Page/Scroll.html`
+}
+
+
+async function editer(oki) {
+    let request = {
+        method: 'PATCH',
+        headers: {
+            'Content-type': 'application/json; charset=utf-8',
+        },
+    }
+    let response = await fetch(`http://127.0.0.1:4529/editArticle/${oki}`, request)
+    window.location.href = `../CreatePoste/Edit.html`
+}
 gethis()
 

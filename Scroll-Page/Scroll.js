@@ -3,8 +3,12 @@ let Create = document.querySelector('.create')
 Create.addEventListener('click', () => {
     window.location.href = "../CreatePoste/Create.html"
 })
+let LogOut = document.querySelector('.LogOut')
 
-
+LogOut.addEventListener('click', () => {
+    localStorage.clear()
+    window.location.href = '../Accueil/Accueil.html'
+})
 
 async function gethis() {
     let response = await fetch('http://127.0.0.1:4529/getAllArticles')
@@ -17,12 +21,13 @@ async function gethis() {
         let ok = document.createElement('div')
         ok.classList.add('poste1')
         ok.innerHTML = 
-        `<p>${Articles.title}</p>
+        `<p class="h1">${Articles.title}</p>
         <img src="${Articles.image}">
-        <p>${Articles.description}</p>
-        <p>${Articles.location}</p>
-        <p>${Articles.price}</p>`
+        ${Articles.description}
+        <p class="location">${Articles.location}</p>
+        <p class="price">${Articles.price}</p>`
         articlesmachin.appendChild(ok)
     });
 }
 gethis()
+

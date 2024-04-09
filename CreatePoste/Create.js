@@ -12,8 +12,7 @@ async function CreatePost() {
         description : description,
         location : location,
         price : price,
-        localStorage: localStorage.getItem('session')
-
+        userid: localStorage.getItem('session')
     } 
     let request = {
         method: 'POST',
@@ -46,3 +45,5 @@ async function CreatePost() {
                 error.innerHTML = "Demerde toi c'est pas bon"
             }         
     }
+let suppr = document.querySelector('.Suppr')
+suppr.location.href = '../Scroll-Page/Scroll.html'

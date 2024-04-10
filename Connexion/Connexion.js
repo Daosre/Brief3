@@ -1,4 +1,5 @@
 let id
+let role
 async function handleregister() {
     let firstName = document.querySelector('.Name').value
     let lastName = document.querySelector('.LastName').value
@@ -24,8 +25,10 @@ async function handleregister() {
     let apiRequest = await fetch('http://127.0.0.1:4529/register', request)
             let reponse = await apiRequest
             if(reponse.status === 200) {
-                id = await reponse.json()
-                localStorage.setItem('session', id.id)
+                user = await reponse.json()
+                console.log(user)
+                localStorage.setItem('session', user.id)
+                localStorage.setItem('role', user.role)
                 window.location.href = '../Scroll-Page/Scroll.html'
             } else {
                 error.innerHTML = "Demerde toi c'est pas bon"
@@ -52,9 +55,17 @@ async function handleregister() {
         let apiRequest = await fetch('http://127.0.0.1:4529/login', request)
             let reponse = await apiRequest
             if(reponse.status === 200) {
-                id = await reponse.json()
-                localStorage.setItem('session', id.id)
+                user = await reponse.json()
+                localStorage.setItem('session', user.id)
+                localStorage.setItem('role', user.role)
+                let utilisateur = localStorage.getItem('role')
+                if(utilisateur === "user")
+                {
                 window.location.href = '../Scroll-Page/Scroll.html'
+                 }
+                else{
+                    window.location.href= '../admin/admin.html'
+                }
             } else {
                 error.innerHTML = "Demerde toi c'est pas bon"
             }

@@ -1,0 +1,105 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: #cddddd8d;
+    color: red;
+}
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    height: 20vh;
+    box-shadow: 0 2px 20px rgba(22, 189, 22, 0.752);
+    background-image: url(../media/giphy.gif);
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: cover;
+}
+.logo {
+    object-fit: cover;
+    width: 10%;
+    margin: 20px;
+    filter: drop-shadow(0 0 6px black);
+}
+.button {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 10px;
+    width: 5%;
+    gap: 10px;
+}
+/* Main */
+.main {
+    display: flex;
+    justify-content: center;
+    margin:40px 20px;
+    flex-wrap: wrap;
+}
+
+.poste1 {
+    width: 15%;
+    border: none;
+    box-shadow: 0 2px 30px rgba(255, 166, 0, 0.561);
+    margin: 40px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    background-color: rgba(255, 255, 255, 0.667);
+}
+.h1 {
+    font-size: 30px;
+    margin: 10px;
+    color: black;
+}
+img {
+    width: 200px;
+    aspect-ratio: 1;
+    object-fit: cover;
+}
+.descript {
+    margin: 10px;
+    width: 70%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    text-align: center;
+}
+.location {
+    font-size: 20px;
+    font-weight: bold;
+    color: black;
+}
+.price {
+    font-size: 20px;
+    color: green;
+}
+footer {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(../media/giphy.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+    box-shadow: 0 1px 30px black;
+}
+ul {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    color: white;
+    list-style: none;
+}
+li {
+    font-size: 20px;
+    cursor: pointer;
+    filter: drop-shadow(0 0 2px white);
+    list-style: none;
+}

@@ -13,7 +13,7 @@ LogOut.addEventListener('click', () => {
 
 let user = document.querySelector('.user')
 
-Create.addEventListener('click', () => {
+user.addEventListener('click', () => {
     window.location.href = "user.html"
 })
 

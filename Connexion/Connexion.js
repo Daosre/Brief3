@@ -61,10 +61,6 @@ async function handleLogin() {
     localStorage.setItem("role", user.role);
     localStorage.setItem("isActive", user.isActive);
     let utilisateur = localStorage.getItem("role");
-    let active = localStorage.getItem("isActive");
-    if (active != true) {
-      window.location.reload();
-    }
     if (utilisateur === "user") {
       window.location.href = "../Scroll-Page/Scroll.html";
     } else {

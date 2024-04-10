@@ -1,3 +1,11 @@
+let LogOut = document.querySelector('.LogOut')
+
+LogOut.addEventListener('click', () => {
+    localStorage.clear()
+    window.location.href = '../Accueil/Accueil.html'
+})
+
+
 async function getAllUser() {
     let response = await fetch('http://127.0.0.1:4529/getAllUsers')
     let main = await response.json()

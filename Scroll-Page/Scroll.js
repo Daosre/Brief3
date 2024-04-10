@@ -50,8 +50,6 @@ async function Supprimer(oki) {
 async function editer(oki) {
     localStorage.setItem('Article', oki)
 }
-
-
 gethis()
 
 
